@@ -15,10 +15,10 @@ const projects = [
   },
   {
     title: 'Portfolio Manager – SaaS Platform',
-    description: 'A SaaS platform for generating portfolio websites with analytics, QR tools, authentication, and performance optimization achieving 95+ Lighthouse score.',
-    tech: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
+    description: 'A comprehensive portfolio management application built with Next.js 15. Features custom profile creation, resume & link management, analytics dashboard, and secure Clerk authentication.',
+    tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Clerk', 'Shadcn/ui'],
     github: 'https://github.com/AvneeshTripathi72/Portfolio_Manager',
-    live: 'https://portfolio-manager-seven.vercel.app/',
+    live: 'https://dashboard.avanishtripathi.me/',
     image: '/portfoliomanger.png',
     featured: true
   },
