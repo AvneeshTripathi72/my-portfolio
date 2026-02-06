@@ -44,7 +44,6 @@ const Navbar = () => {
     >
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
           <motion.a
             href="#home"
             className="text-2xl font-bold text-green-500"
@@ -54,7 +53,6 @@ const Navbar = () => {
             AKT
           </motion.a>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navItems.map((item) => (
               <motion.a
@@ -82,7 +80,6 @@ const Navbar = () => {
             </motion.a>
           </div>
 
-          {/* Mobile Menu Button */}
           <motion.button
             className="md:hidden p-2 text-gray-400 hover:text-white"
             onClick={() => setIsOpen(!isOpen)}
@@ -93,7 +90,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div

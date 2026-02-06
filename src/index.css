@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Global styles */
 body {
   background-color: #0b0f1a;
   color: #e5e7eb;
@@ -13,7 +12,6 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-/* Custom scrollbar - use default */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -31,7 +29,6 @@ body {
   background: #4b5563;
 }
 
-/* Scroll Progress Bar - at top, horizontal */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -42,7 +39,6 @@ body {
   transition: width 0.1s ease;
 }
 
-/* Cursor Glow */
 .cursor-glow {
   position: fixed;
   width: 300px;
@@ -54,7 +50,6 @@ body {
   z-index: 0;
 }
 
-/* Glassmorphism card */
 @layer components {
   .glass-card {
     background-color: rgba(18, 24, 42, 0.8);
@@ -132,18 +127,15 @@ body {
   }
 }
 
-/* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Selection color */
 ::selection {
   background: rgba(34, 197, 94, 0.2);
   color: white;
 }
 
-/* Gradient animation */
 @keyframes gradient {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }

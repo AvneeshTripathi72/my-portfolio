@@ -3,7 +3,6 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { Float, MeshDistortMaterial, Sphere, TorusKnot, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
-// Animated wireframe sphere
 const WireframeSphere = () => {
   const meshRef = useRef()
   
@@ -27,7 +26,6 @@ const WireframeSphere = () => {
   )
 }
 
-// Floating particles
 const Particles = ({ count = 100 }) => {
   const points = useMemo(() => {
     const positions = new Float32Array(count * 3)
@@ -68,7 +66,6 @@ const Particles = ({ count = 100 }) => {
   )
 }
 
-// Glowing torus knot
 const GlowingTorusKnot = () => {
   const meshRef = useRef()
 
@@ -95,7 +92,6 @@ const GlowingTorusKnot = () => {
   )
 }
 
-// Floating abstract geometry
 const FloatingGeometry = () => {
   return (
     <Float speed={1.5} rotationIntensity={1} floatIntensity={2}>
@@ -112,7 +108,6 @@ const FloatingGeometry = () => {
   )
 }
 
-// Main 3D Scene component
 const HeroScene = () => {
   return (
     <div className="absolute inset-0 -z-10">
@@ -130,7 +125,6 @@ const HeroScene = () => {
         <GlowingTorusKnot />
         <FloatingGeometry />
         
-        {/* Subtle camera movement on mouse */}
         <OrbitControls 
           enableZoom={false} 
           enablePan={false}

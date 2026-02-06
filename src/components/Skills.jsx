@@ -41,7 +41,6 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-20 px-4 relative bg-bg">
-      {/* Subtle background */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
       <div className="max-w-6xl mx-auto relative">

@@ -27,7 +27,7 @@ const projects = [
     description: 'Interactive movie ticket booking application with seat selection, showtime management, and secure payment processing.',
     tech: ['React', 'Express.js', 'PostgreSQL', 'Node.js', 'JWT'],
     github: 'https://github.com/AvneeshTripathi72/movie_System',
-    live: 'https://www.avanishtripathi.me/',
+    live: 'https://movietickets.avanishtripathi.me/',
     image: '/moie.png',
     featured: true
   },
@@ -73,7 +73,6 @@ const ProjectCard = ({ project, index, isInView }) => {
       onMouseLeave={() => setIsHovered(false)}
       className="border border-gray-700 rounded-2xl overflow-hidden group hover:border-green-500/50 transition-all duration-300 bg-gray-900/50"
     >
-      {/* Project Image/Preview */}
       <div className="relative h-48 bg-gradient-to-br from-gray-800 to-gray-900 overflow-hidden">
         {project.image && !imgError ? (
           <img 
@@ -98,7 +97,6 @@ const ProjectCard = ({ project, index, isInView }) => {
           </div>
         )}
         
-        {/* Overlay on hover */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
@@ -128,7 +126,6 @@ const ProjectCard = ({ project, index, isInView }) => {
           )}
         </motion.div>
         
-        {/* Featured badge */}
         {project.featured && (
           <div className="absolute top-3 right-3 px-3 py-1 bg-green-500 text-black text-xs font-bold rounded-lg">
             Featured
@@ -136,7 +133,6 @@ const ProjectCard = ({ project, index, isInView }) => {
         )}
       </div>
 
-      {/* Project Info */}
       <div className="p-6">
         <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-500 transition-colors duration-300">
           {project.title}
@@ -145,7 +141,6 @@ const ProjectCard = ({ project, index, isInView }) => {
           {project.description}
         </p>
         
-        {/* Tech Stack */}
         <div className="flex flex-wrap gap-2 mb-4">
           {project.tech.slice(0, 4).map((tech) => (
             <span
@@ -162,7 +157,6 @@ const ProjectCard = ({ project, index, isInView }) => {
           )}
         </div>
 
-        {/* Links */}
         <div className="flex items-center gap-4">
           <a
             href={project.github}
@@ -226,7 +220,6 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Show More Button */}
         {projects.length > 3 && (
           <motion.div
             initial={{ opacity: 0 }}

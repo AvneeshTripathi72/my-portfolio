@@ -11,19 +11,15 @@ const Hero = () => {
       className="relative min-h-screen flex items-center px-4 pt-24"
       style={{ backgroundColor: '#0b0f1a' }}
     >
-      {/* Soft gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/80" />
       
-      {/* Subtle background gradient circles */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
       
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           
-          {/* Left Side - Details */}
           <div className="text-left">
-            {/* Name */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -34,7 +30,6 @@ const Hero = () => {
               <span className="gradient-text">Avneesh Kumar Tripathi</span>
             </motion.h1>
 
-            {/* Title */}
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -48,7 +43,6 @@ const Hero = () => {
               <span className="text-cyan-400">MERN</span>
             </motion.h2>
 
-            {/* Tagline */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -59,7 +53,6 @@ const Hero = () => {
               and performance-optimized platforms with clean architecture.
             </motion.p>
 
-            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -85,7 +78,6 @@ const Hero = () => {
               </motion.a>
             </motion.div>
 
-            {/* Social Links - More visible */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -123,7 +115,6 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Right Side - Resume Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -131,7 +122,6 @@ const Hero = () => {
             className="flex justify-center"
           >
             <div className="w-full max-w-md border border-gray-700 rounded-2xl overflow-hidden hover:border-green-500/50 transition-colors bg-gray-900/80 shadow-xl">
-              {/* Resume Preview Image */}
               <div className="bg-gray-800 relative overflow-hidden">
                 <img 
                   src="/resume.png"
@@ -150,7 +140,6 @@ const Hero = () => {
                 </div>
               </div>
               
-              {/* Download Button */}
               <div className="p-4 bg-gray-900">
                 <motion.a
                   href="/Avneesh_tripathi_resume.pdf"

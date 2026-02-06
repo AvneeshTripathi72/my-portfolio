@@ -4,12 +4,10 @@ import { Github, Linkedin, Mail, Heart } from 'lucide-react'
 const Footer = () => {
   return (
     <footer className="relative py-12 px-4 border-t border-white/5 bg-bg">
-      {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-primary/5 to-transparent" />
       
       <div className="max-w-6xl mx-auto relative">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Logo & Copyright */}
           <div className="text-center md:text-left">
             <motion.a
               href="#home"
@@ -23,7 +21,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div className="flex gap-8 text-sm text-textMuted">
             <a href="#about" className="hover:text-primary transition-colors">
               About
@@ -36,7 +33,6 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Social Icons */}
           <div className="flex items-center gap-4">
             <motion.a
               href="https://github.com/AvneeshTripathi72"

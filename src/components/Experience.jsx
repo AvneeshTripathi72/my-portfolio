@@ -3,7 +3,6 @@ import { useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 
-// Coding platforms with screenshots
 const codingPlatforms = [
   {
     name: 'LeetCode',
@@ -117,7 +116,6 @@ const Experience = () => {
           </h2>
         </motion.div>
 
-        {/* Leadership Role */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -137,7 +135,6 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        {/* Competitive Programming Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -160,7 +157,6 @@ const Experience = () => {
             <li>• CodeChef <span className="text-green-500 font-medium">2★</span> (1455), Codeforces: <span className="text-green-500 font-medium">1235</span></li>
           </ul>
 
-          {/* Platform Cards with Screenshots */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
             {codingPlatforms.map((platform, index) => (
               <PlatformCard 
@@ -173,7 +169,6 @@ const Experience = () => {
           </div>
         </motion.div>
 
-        {/* Education */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
