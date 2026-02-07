@@ -55,7 +55,7 @@ const projects = [
     tech: ['Python', 'FastAPI', 'React', 'LangChain', 'ChromaDB'],
     github: 'https://github.com/AvneeshTripathi72/rag-powered-chatbot_0',
     live: null,
-    image: null,
+    image: '/rag.png',
     featured: false
   }
 ]
