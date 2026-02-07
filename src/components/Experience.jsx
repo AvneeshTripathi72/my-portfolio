@@ -32,7 +32,7 @@ const codingPlatforms = [
     name: 'GeeksforGeeks',
     screenshot: '/gfg.png',
     problems: '400+',
-    link: 'https://auth.geeksforgeeks.org/user/avneeshtripathi',
+    link: 'https://www.geeksforgeeks.org/profile/avanishtripathiab54x?tab=activity',
     details: 'Institute Rank Top 10'
   },
   {
