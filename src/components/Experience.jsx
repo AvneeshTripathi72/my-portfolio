@@ -40,7 +40,7 @@ const codingPlatforms = [
     screenshot: '/codolio.png',
     rating: 'Active',
     problems: '1480+',
-    link: 'https://codolio.com/profile/AvneeshTripathi',
+    link: 'https://codolio.com/profile/A7B9CDM3',
     details: 'All Platforms Combined'
   }
 ]
