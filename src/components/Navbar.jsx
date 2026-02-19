@@ -100,7 +100,7 @@ const Navbar = () => {
           >
             <div className="px-4 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
               {navItems.map((item) => (
-                <motion.a
+                <a
                   key={item.name}
                   href={item.href}
                   className={`block py-3 px-4 rounded-lg transition-colors ${
@@ -108,20 +108,32 @@ const Navbar = () => {
                       ? 'bg-green-500/10 text-green-500'
                       : 'text-gray-400 hover:bg-white/5'
                   }`}
-                  onClick={() => setIsOpen(false)}
-                  whileTap={{ scale: 0.98 }}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    setIsOpen(false)
+                    const element = document.querySelector(item.href)
+                    if (element) {
+                      const offset = 80
+                      const elementPosition = element.getBoundingClientRect().top
+                      const offsetPosition = elementPosition + window.pageYOffset - offset
+                      window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                      })
+                    }
+                  }}
                 >
                   {item.name}
-                </motion.a>
+                </a>
               ))}
-              <motion.a
+              <a
                 href="/Avneesh_tripathi_resume.pdf"
                 download
-                className="block py-3 px-4 mt-4 bg-green-500 text-black text-center text-sm rounded-lg font-semibold"
+                className="block py-3 px-4 mt-4 bg-green-500 text-black text-center text-sm rounded-lg font-semibold hover:bg-green-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Download Resume
-              </motion.a>
+              </a>
             </div>
           </motion.div>
         )}
