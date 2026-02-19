@@ -96,9 +96,9 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10"
+            className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-2">
+            <div className="px-4 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
               {navItems.map((item) => (
                 <motion.a
                   key={item.name}

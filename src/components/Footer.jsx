@@ -21,7 +21,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="flex gap-8 text-sm text-textMuted">
+          <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm text-textMuted">
             <a href="#about" className="hover:text-primary transition-colors">
               About
             </a>

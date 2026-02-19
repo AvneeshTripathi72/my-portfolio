@@ -8,13 +8,13 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center px-4 pt-24"
+      className="relative min-h-screen flex items-center px-4 pt-24 overflow-hidden"
       style={{ backgroundColor: '#0b0f1a' }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-transparent to-black/80" />
       
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/5 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse" />
       
       <div className="max-w-6xl mx-auto w-full relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
