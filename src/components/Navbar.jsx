@@ -98,15 +98,15 @@ const Navbar = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden bg-gray-900/95 backdrop-blur-md border-t border-white/10 overflow-hidden"
           >
-            <div className="px-4 py-4 space-y-2 max-h-[80vh] overflow-y-auto">
+            <div className="px-4 py-4 space-y-2 max-h-[80vh] overflow-y-auto bg-gray-900 border-t border-white/10">
               {navItems.map((item) => (
                 <a
                   key={item.name}
                   href={item.href}
-                  className={`block py-3 px-4 rounded-lg transition-colors ${
+                  className={`block py-3 px-4 rounded-lg transition-colors duration-200 ${
                     activeSection === item.href.slice(1)
                       ? 'bg-green-500/10 text-green-500'
-                      : 'text-gray-400 hover:bg-white/5'
+                      : 'text-gray-400 hover:bg-white/5 hover:text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
