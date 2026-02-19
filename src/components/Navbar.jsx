@@ -108,27 +108,14 @@ const Navbar = () => {
                       ? 'bg-green-500/10 text-green-500'
                       : 'text-gray-400 hover:bg-white/5'
                   }`}
-                  onClick={(e) => {
-                    e.preventDefault()
-                    setIsOpen(false)
-                    const element = document.querySelector(item.href)
-                    if (element) {
-                      const offset = 80
-                      const elementPosition = element.getBoundingClientRect().top
-                      const offsetPosition = elementPosition + window.pageYOffset - offset
-                      window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                      })
-                    }
-                  }}
+                  onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </a>
               ))}
               <a
                 href="/Avneesh_tripathi_resume.pdf"
-                download
+                download="Avneesh_Tripathi_Resume.pdf"
                 className="block py-3 px-4 mt-4 bg-green-500 text-black text-center text-sm rounded-lg font-semibold hover:bg-green-400 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
