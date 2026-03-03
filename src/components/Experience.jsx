@@ -249,10 +249,13 @@ const Experience = () => {
               </h3>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <motion.div 
+                  <motion.a
                     key={index}
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ y: -5 }}
-                    className="group p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/30 transition-all"
+                    className={`block group p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/30 transition-all ${cert.link ? 'cursor-pointer' : ''}`}
                   >
                     <div className="flex gap-4">
                       {cert.image && (
@@ -264,25 +267,22 @@ const Experience = () => {
                         <div className="flex items-start justify-between">
                           <h4 className="text-white font-medium group-hover:text-green-500 transition-colors">{cert.name}</h4>
                           {cert.link && (
-                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-500">
+                            <div className="text-gray-500 group-hover:text-green-500">
                               <ExternalLink size={16} />
-                            </a>
+                            </div>
                           )}
                         </div>
                         <p className="text-gray-400 text-sm mt-1">{cert.issuer} • {cert.year}</p>
                         {cert.link && (
-                          <a 
-                            href={cert.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-xs text-green-500/70 hover:text-green-500 mt-2 inline-block"
+                          <span 
+                            className="text-xs text-green-500/70 group-hover:text-green-500 mt-2 inline-block"
                           >
                             Verify Credential →
-                          </a>
+                          </span>
                         )}
                       </div>
                     </div>
-                  </motion.div>
+                  </motion.a>
                 ))}
               </div>
             </motion.div>
