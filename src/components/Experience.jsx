@@ -142,7 +142,9 @@ const Experience = () => {
     {
       name: 'AWS Certified Cloud Practitioner',
       issuer: 'Amazon Web Services',
-      year: '2025'
+      year: '2025',
+      link: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/84789ee13c9948238eb39e46b26c7541',
+      image: '/aws.png'
     },
     {
       name: 'The Complete Web Developer Bootcamp',
@@ -247,10 +249,40 @@ const Experience = () => {
               </h3>
               <div className="space-y-4">
                 {certifications.map((cert, index) => (
-                  <div key={index} className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/30 transition-colors">
-                    <h4 className="text-white font-medium">{cert.name}</h4>
-                    <p className="text-gray-400 text-sm">{cert.issuer} • {cert.year}</p>
-                  </div>
+                  <motion.div 
+                    key={index}
+                    whileHover={{ y: -5 }}
+                    className="group p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/30 transition-all"
+                  >
+                    <div className="flex gap-4">
+                      {cert.image && (
+                        <div className="w-16 h-16 rounded-lg overflow-hidden bg-gray-800 shrink-0">
+                          <img src={cert.image} alt={cert.name} className="w-full h-full object-cover" />
+                        </div>
+                      )}
+                      <div className="flex-1 text-left">
+                        <div className="flex items-start justify-between">
+                          <h4 className="text-white font-medium group-hover:text-green-500 transition-colors">{cert.name}</h4>
+                          {cert.link && (
+                            <a href={cert.link} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-green-500">
+                              <ExternalLink size={16} />
+                            </a>
+                          )}
+                        </div>
+                        <p className="text-gray-400 text-sm mt-1">{cert.issuer} • {cert.year}</p>
+                        {cert.link && (
+                          <a 
+                            href={cert.link} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="text-xs text-green-500/70 hover:text-green-500 mt-2 inline-block"
+                          >
+                            Verify Credential →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </motion.div>
                 ))}
               </div>
             </motion.div>
