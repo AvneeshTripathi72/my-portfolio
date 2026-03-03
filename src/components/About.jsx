@@ -53,7 +53,7 @@ const About = () => {
             
             <p className="text-gray-400 leading-relaxed">
               I have a strong foundation in full-stack development, data structures, 
-              and system design. I've solved <span className="text-green-500 font-medium">1480+ algorithmic problems</span> across 
+              and system design. I've solved <span className="text-green-500 font-medium">1487+ algorithmic problems</span> across 
               platforms and built production-ready applications.
             </p>
             <div className="space-y-3 pt-4">

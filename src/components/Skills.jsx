@@ -30,7 +30,7 @@ const skillCategories = [
   },
   {
     title: 'AI & ML',
-    skills: ['RAG', 'Gemini API', 'Vector Embeddings', 'Semantic Search', 'Prompt Engineering'],
+    skills: ['RAG', 'Gemini API', 'xAI Grok API', 'Vector Embeddings', 'Semantic Search', 'Multi-LLM Integration', 'Prompt Engineering'],
     color: 'accent'
   },
   {

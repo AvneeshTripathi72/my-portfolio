@@ -219,7 +219,8 @@ const Experience = () => {
               Competitive Programming
             </h3>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              1487+ problems solved across platforms, maintaining a focus on algorithmic optimization.
+              1487+ problems solved across platforms, maintaining a focus on algorithmic optimization. 
+              <span className="text-green-500 font-medium ml-2">Max Streak: 605 Days</span>
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {codingPlatforms.slice(0, 4).map((platform, index) => (
@@ -267,7 +268,9 @@ const Experience = () => {
                 <p className="text-green-500 text-sm font-medium mb-1">2023 - 2027</p>
                 <h4 className="text-lg font-semibold text-white">B.Tech in Computer Science Engineering</h4>
                 <p className="text-gray-400">KIET Group of Institutions, Ghaziabad</p>
-                <div className="mt-2 text-sm text-gray-500">CGPA: 8.32/10</div>
+                <div className="mt-2 text-sm text-gray-500">
+                  CGPA: 8.32/10 • Consistent SGPA 8.5+ in Core Subjects (DSA, OOP, OS, DBMS)
+                </div>
               </div>
             </motion.div>
           </div>

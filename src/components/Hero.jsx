@@ -36,11 +36,10 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-gray-400 font-medium mb-4"
             >
-              Full Stack Developer |{' '}
               <span className="text-green-500">Java</span> •{' '}
               <span className="text-cyan-400">Spring Boot</span> •{' '}
               <span className="text-green-500">React</span> •{' '}
-              <span className="text-cyan-400">MERN</span>
+              <span className="text-cyan-400">Cloud & AI</span>
             </motion.h2>
 
             <motion.p
