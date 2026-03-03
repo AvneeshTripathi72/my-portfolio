@@ -101,6 +101,56 @@ const Experience = () => {
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
+  const experiences = [
+    {
+      title: 'Cloud Engineer Intern',
+      company: 'Atom Pluton Technology',
+      period: 'Mar 2025 — Present',
+      location: 'Remote',
+      points: [
+        'Designed and managed cloud infrastructure on AWS (EC2, S3, RDS, Lambda, CloudWatch) with CI/CD pipelines via GitHub Actions and AWS CodePipeline',
+        'Configured Nginx reverse proxies, load balancers, and Docker/Kubernetes containerization for scalable, highly available microservices',
+        'Monitored system health using CloudWatch and Prometheus; managed infrastructure-as-code with Terraform and Ansible',
+        'Reduced deployment time by 40% by automating provisioning scripts and standardizing containerized environments'
+      ]
+    },
+    {
+      title: 'Freelance Full-Stack Developer',
+      company: 'TalentTrack — Talent Agency Admin Dashboard',
+      period: 'Jan 2025 — Present',
+      location: 'Remote',
+      points: [
+        'Built internal management platform using Next.js 15, React 19, and Supabase (PostgreSQL) with RLS-based role hierarchy and full CRUD',
+        'Integrated Cloudflare R2 for asset storage, custom glassmorphism UI with Tailwind CSS, and React Hook Form + Zod; 69+ Vercel production deployments',
+        'Designed normalized PostgreSQL schema with ER diagram; implemented real-time data sync and secure Gmail-only registration flows'
+      ]
+    },
+    {
+      title: 'Deputy Secretary',
+      company: 'K3 Club, KIET',
+      period: 'Aug 2024 — Present',
+      location: 'Ghaziabad',
+      points: [
+        'Organized 12+ technical workshops for 200+ students',
+        'Increased LinkedIn and Instagram engagement by 150%',
+        'Organized campus-wide coding competitions and tech events'
+      ]
+    }
+  ]
+
+  const certifications = [
+    {
+      name: 'AWS Certified Cloud Practitioner',
+      issuer: 'Amazon Web Services',
+      year: '2025'
+    },
+    {
+      name: 'The Complete Web Developer Bootcamp',
+      issuer: 'Udemy (Angela Yu)',
+      year: '2024'
+    }
+  ]
+
   return (
     <section id="experience" className="py-20 px-4" style={{ backgroundColor: '#0b0f1a' }}>
       <div className="max-w-6xl mx-auto" ref={ref}>
@@ -110,83 +160,118 @@ const Experience = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
+          className="mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Experience & <span className="text-green-500">Achievements</span>
           </h2>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="mb-16"
-        >
-          <div className="border-l-2 border-green-500 pl-6 py-2">
-            <p className="text-green-500 text-sm font-medium mb-1">2024 - Present</p>
-            <h3 className="text-xl font-semibold text-white mb-2">
-              Deputy Secretary — K3 Club, KIET
-            </h3>
-            <p className="text-gray-400 leading-relaxed max-w-2xl">
-              Organized 12+ technical workshops for 200+ students. 
-              Increased social media engagement by 150%. 
-              Led coding competitions and tech events across the campus.
-            </p>
-          </div>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12"
-        >
-          <h3 className="text-2xl font-semibold text-white mb-4">
-            Competitive Programming
+        {/* Work Experience */}
+        <div className="mb-20">
+          <h3 className="text-2xl font-semibold text-white mb-8 flex items-center gap-3">
+            <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 text-sm">01</span>
+            Work Experience
           </h3>
-
-          <p className="text-gray-400 max-w-2xl mb-6 leading-relaxed">
-            I actively practice competitive programming and data structures,
-            focusing on algorithmic thinking, optimization, and consistency.
-            I enjoy solving challenging problems and participating in contests.
-          </p>
-
-          <ul className="space-y-2 text-white mb-8">
-            <li>• <span className="text-green-500 font-medium">1480+</span> problems solved across platforms</li>
-            <li>• LeetCode max rating: <span className="text-green-500 font-medium">1581</span></li>
-            <li>• CodeChef <span className="text-green-500 font-medium">2★</span> (1455), Codeforces: <span className="text-green-500 font-medium">1235</span></li>
-          </ul>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-            {codingPlatforms.map((platform, index) => (
-              <PlatformCard 
-                key={platform.name}
-                platform={platform}
-                index={index}
-                isInView={isInView}
-              />
+          <div className="space-y-12">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="relative pl-8 border-l-2 border-gray-800 hover:border-green-500/50 transition-colors"
+              >
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-gray-900 border-2 border-green-500" />
+                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                  <div>
+                    <h4 className="text-xl font-bold text-white">{exp.title}</h4>
+                    <p className="text-green-500 font-medium">{exp.company}</p>
+                  </div>
+                  <div className="text-left md:text-right mt-2 md:mt-0">
+                    <p className="text-gray-400 text-sm">{exp.period}</p>
+                    <p className="text-gray-500 text-xs">{exp.location}</p>
+                  </div>
+                </div>
+                <ul className="space-y-3">
+                  {exp.points.map((point, i) => (
+                    <li key={i} className="text-gray-400 text-sm leading-relaxed flex gap-3">
+                      <span className="text-green-500 mt-1.5">•</span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <h3 className="text-2xl font-semibold text-white mb-4">
-            Education
-          </h3>
-          <div className="border-l-2 border-gray-600 pl-6 py-2">
-            <p className="text-gray-500 text-sm font-medium mb-1">2023 - 2027</p>
-            <h4 className="text-lg font-semibold text-white mb-1">
-              B.Tech in Computer Science Engineering
-            </h4>
-            <p className="text-gray-400">
-              KIET Group of Institutions, Ghaziabad
+        {/* CP & Skills Row */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-20">
+          {/* Competitive Programming */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
+              <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 text-sm">02</span>
+              Competitive Programming
+            </h3>
+            <p className="text-gray-400 mb-6 leading-relaxed">
+              1487+ problems solved across platforms, maintaining a focus on algorithmic optimization.
             </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {codingPlatforms.slice(0, 4).map((platform, index) => (
+                <PlatformCard 
+                  key={platform.name}
+                  platform={platform}
+                  index={index}
+                  isInView={isInView}
+                />
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Certifications & Education */}
+          <div className="space-y-12">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 text-sm">03</span>
+                Certifications
+              </h3>
+              <div className="space-y-4">
+                {certifications.map((cert, index) => (
+                  <div key={index} className="p-4 bg-gray-900/50 border border-gray-800 rounded-xl hover:border-green-500/30 transition-colors">
+                    <h4 className="text-white font-medium">{cert.name}</h4>
+                    <p className="text-gray-400 text-sm">{cert.issuer} • {cert.year}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <h3 className="text-2xl font-semibold text-white mb-6 flex items-center gap-3">
+                <span className="w-8 h-8 rounded-lg bg-green-500/10 flex items-center justify-center text-green-500 text-sm">04</span>
+                Education
+              </h3>
+              <div className="p-6 bg-gray-900/50 border border-gray-800 rounded-xl">
+                <p className="text-green-500 text-sm font-medium mb-1">2023 - 2027</p>
+                <h4 className="text-lg font-semibold text-white">B.Tech in Computer Science Engineering</h4>
+                <p className="text-gray-400">KIET Group of Institutions, Ghaziabad</p>
+                <div className="mt-2 text-sm text-gray-500">CGPA: 8.32/10</div>
+              </div>
+            </motion.div>
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

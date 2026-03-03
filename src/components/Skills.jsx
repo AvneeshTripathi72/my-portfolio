@@ -4,13 +4,13 @@ import { useRef } from 'react'
 
 const skillCategories = [
   {
-    title: 'Programming Languages',
+    title: 'Programming',
     skills: ['Java', 'JavaScript', 'TypeScript', 'Python', 'C/C++', 'SQL'],
     color: 'primary'
   },
   {
     title: 'Frontend',
-    skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Material UI', 'Monaco Editor', 'HTML/CSS'],
+    skills: ['React.js', 'Next.js', 'Tailwind CSS', 'Material UI', 'Monaco Editor', 'Redux', 'Lucide React', 'HTML/CSS'],
     color: 'accent'
   },
   {
@@ -25,7 +25,17 @@ const skillCategories = [
   },
   {
     title: 'DevOps & Cloud',
-    skills: ['Docker', 'Kubernetes', 'AWS (EC2, S3, RDS)', 'Nginx', 'GitHub Actions', 'CI/CD'],
+    skills: ['Docker', 'Kubernetes', 'AWS', 'GCP', 'Terraform', 'Ansible', 'Nginx', 'GitHub Actions'],
+    color: 'primary'
+  },
+  {
+    title: 'AI & ML',
+    skills: ['RAG', 'Gemini API', 'Vector Embeddings', 'Semantic Search', 'Prompt Engineering'],
+    color: 'accent'
+  },
+  {
+    title: 'Tools & Others',
+    skills: ['Git', 'JIRA', 'Postman', 'Prometheus', 'WebPack', 'Linux/Unix', 'Agile/Scrum'],
     color: 'primary'
   },
   {

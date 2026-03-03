@@ -5,19 +5,28 @@ import { ExternalLink, Github, ChevronRight } from 'lucide-react'
 
 const projects = [
   {
-    title: 'Code Verse – Online Coding Platform',
-    description: 'A full-stack coding platform with 50+ DSA problems, live contests, multi-language execution, Redis caching, and AI-powered code suggestions. Improved API response time by 65%.',
-    tech: ['React', 'Node.js', 'MongoDB', 'Redis', 'Judge0 API', 'Socket.io'],
+    title: 'Wibee - Creator Discovery & Rating Platform',
+    description: 'Full-stack SaaS for discovering and rating digital creators; JWT/Bcrypt auth, admin dashboard, and creator profiles with rating history and performance metrics. Security-hardened with Helmet, Mongo Sanitize, and Rate Limiting; automated data pipeline via Puppeteer/Playwright scraping.',
+    tech: ['MERN Stack', 'JWT', 'Puppeteer', 'Lucide React'],
+    github: 'https://github.com/AvneeshTripathi72',
+    live: null,
+    image: '/wibee.png',
+    featured: true
+  },
+  {
+    title: 'Code Verse - Online Coding Platform',
+    description: 'Full-stack platform with 50+ DSA problems and live contests; Redis caching cut API response time by 65%; Judge0 multi-language execution at 99.2% uptime. Features RBAC auth, Nginx reverse proxy on AWS EC2, and Gemini AI code suggestions.',
+    tech: ['React', 'Node.js', 'MongoDB', 'Redis', 'Judge0 API', 'Nginx'],
     github: 'https://github.com/AvneeshTripathi72/coding_Platform',
     live: null,
     image: '/codingplatform.png',
     featured: true
   },
   {
-    title: 'Portfolio Manager – SaaS Platform',
-    description: 'A comprehensive portfolio management application built with Next.js 15. Features custom profile creation, resume & link management, analytics dashboard, and secure Clerk authentication.',
-    tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Clerk', 'Shadcn/ui'],
-    github: 'https://github.com/AvneeshTripathi72/Portfolio_Manager',
+    title: 'Portfolio Manager - Digital Portfolio SaaS',
+    description: 'Next.js 14 SaaS platform with real-time analytics, Clerk OAuth, Prisma ORM, QR code generator, and secure single-use links. Achieved 95+ Lighthouse score via SSR and 40% bundle size reduction via code splitting.',
+    tech: ['Next.js 14', 'TypeScript', 'PostgreSQL', 'Prisma', 'Clerk'],
+    github: 'https://github.com/AvneeshTripathi72/Link_Tree',
     live: 'https://dashboard.avanishtripathi.me/',
     image: '/portfoliomanger.png',
     featured: true
