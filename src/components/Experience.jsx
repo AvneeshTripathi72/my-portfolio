@@ -105,7 +105,7 @@ const Experience = () => {
     {
       title: 'Cloud Engineer Intern',
       company: 'Atom Pluton Technology',
-      period: 'Mar 2025 — Present',
+      period: 'Feb 2025 — Present',
       location: 'Remote',
       points: [
         'Designed and managed cloud infrastructure on AWS (EC2, S3, RDS, Lambda, CloudWatch) with CI/CD pipelines via GitHub Actions and AWS CodePipeline',
