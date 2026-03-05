@@ -66,6 +66,15 @@ const projects = [
     live: null,
     image: '/rag.png',
     featured: false
+  },
+  {
+    title: 'RailAlert India – Train Booking Reminder App',
+    description: 'React Native mobile app helping Indian Railway travelers never miss a ticket booking window. Calculates exact IRCTC booking times for General (120-day), Tatkal AC/Non-AC, and Premium Tatkal tickets, with smart push notifications at 1 day, 1 hour, 30 minutes, and exact opening time. Features live countdown timers, journey management, and filter by status.',
+    tech: ['React Native', 'Expo', 'React Navigation', 'AsyncStorage', 'Expo Notifications', 'date-fns'],
+    github: 'https://github.com/AvneeshTripathi72/train_sheduler',
+    live: null,
+    image: null,
+    featured: false
   }
 ]
 
@@ -101,7 +110,8 @@ const ProjectCard = ({ project, index, isInView }) => {
                project.title.includes('Drive') ? '☁️' : 
                project.title.includes('Portfolio') ? '🎨' : 
                project.title.includes('Chatbot') ? '🤖' : 
-               project.title.includes('Notes') ? '📝' : '🎬'}
+               project.title.includes('Notes') ? '📝' : 
+               project.title.includes('Rail') || project.title.includes('Train') ? '🚂' : '🎬'}
             </motion.div>
           </div>
         )}
