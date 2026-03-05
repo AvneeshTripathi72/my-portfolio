@@ -1,18 +1,8 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { ChevronRight, ExternalLink, Github } from 'lucide-react'
 import { useRef, useState } from 'react'
-import { ExternalLink, Github, ChevronRight } from 'lucide-react'
 
 const projects = [
-  {
-    title: 'Wibee - Creator Discovery & Rating Platform',
-    description: 'Full-stack SaaS for discovering and rating digital creators; JWT/Bcrypt auth, admin dashboard, and creator profiles with rating history and performance metrics. Security-hardened with Helmet, Mongo Sanitize, and Rate Limiting; automated data pipeline via Puppeteer/Playwright scraping.',
-    tech: ['MERN Stack', 'JWT', 'Puppeteer', 'Lucide React'],
-    github: 'https://github.com/AvneeshTripathi72',
-    live: null,
-    image: '/wibee.png',
-    featured: true
-  },
   {
     title: 'Code Verse - Online Coding Platform',
     description: 'Full-stack platform with 50+ DSA problems and live contests; Redis caching cut API response time by 65%; Judge0 multi-language execution at 99.2% uptime. Features RBAC auth, Nginx reverse proxy on AWS EC2, and Gemini AI code suggestions.',
