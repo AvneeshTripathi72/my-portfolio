@@ -146,9 +146,11 @@ const Experience = () => {
       image: '/aws.png'
     },
     {
-      name: 'The Complete Web Developer Bootcamp',
-      issuer: 'Udemy (Angela Yu)',
-      year: '2024'
+      name: 'Database Programming with SQL',
+      issuer: 'Oracle Academy',
+      year: '2025',
+      link: 'https://drive.google.com/file/d/152nu70pEiXiFdqjIrzxANqjGA9K4zK8b/view?usp=sharing',
+      image: '/SQ._CERTFICALTE.png'
     }
   ]
 
