@@ -149,7 +149,7 @@ const Experience = () => {
       name: 'Database Programming with SQL',
       issuer: 'Oracle Academy',
       year: '2025',
-      link: 'https://drive.google.com/file/d/152nu70pEiXiFdqjIrzxANqjGA9K4zK8b/view?usp=sharing',
+      link: '/SQ._CERTFICALTE.png',
       image: '/SQ._CERTFICALTE.png'
     }
   ]
